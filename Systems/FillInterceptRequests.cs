@@ -51,7 +51,7 @@ namespace KitchenWalkThisWay.Systems
                 }
                 else
                 {
-                    Set(customer, new CCompletedIntercept());
+                    EntityManager.AddComponent<CCompletedIntercept>(customer);
                 }
             }
             

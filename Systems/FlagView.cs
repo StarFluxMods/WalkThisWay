@@ -34,7 +34,7 @@ namespace KitchenWalkThisWay.Systems
 					CLinkedView view = views[i];
 
 					if (!Require(entities[i], out CPathingPoint cPathingPoint)) continue;
-					bool isPathable = !Has<CUnpathable>(entities[i]) && !Has<CDestroyApplianceAtDay>(entities[i]);
+					bool isPathable = !EntityManager.HasComponent<CUnpathable>(entities[i]) && !Has<CDestroyApplianceAtDay>(entities[i]);
 					
 					ViewData data = new ViewData
 					{

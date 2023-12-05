@@ -35,7 +35,7 @@ namespace KitchenWalkThisWay.Systems
             
             foreach (Entity requestPathingPointEntity in requestPathingPoints)
             {
-                if (!Has<CRequestPathingPoint>(requestPathingPointEntity)) continue;
+                if (!EntityManager.HasComponent<CRequestPathingPoint>(requestPathingPointEntity)) continue;
                 int pathingIndex = 1;
                 while (_pathingPointsByIndex.ContainsKey(pathingIndex))
                     pathingIndex++;

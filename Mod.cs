@@ -13,12 +13,12 @@ namespace KitchenWalkThisWay
     {
         private const string MOD_GUID = "com.starfluxgames.walkthisway";
         private const string MOD_NAME = "Walk This Way";
-        private const string MOD_VERSION = "0.1.0";
+        private const string MOD_VERSION = "0.1.1";
         private const string MOD_AUTHOR = "StarFluxGames";
         private const string MOD_GAMEVERSION = ">=1.1.4";
 
         public static AssetBundle Bundle;
-        private static KitchenLogger _logger;
+        public static KitchenLogger _logger;
 
         public Mod() : base(MOD_GUID, MOD_NAME, MOD_AUTHOR, MOD_VERSION, MOD_GAMEVERSION, Assembly.GetExecutingAssembly()) { }
 

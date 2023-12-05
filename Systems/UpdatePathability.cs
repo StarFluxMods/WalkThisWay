@@ -41,12 +41,12 @@ namespace KitchenWalkThisWay.Systems
                         
                 if (_path.status != NavMeshPathStatus.PathComplete)
                 {
-                    if (!HasComponent<CUnpathable>(currentPathingPoint))
-                        EntityManager.AddComponentData(currentPathingPoint, new CUnpathable());
+                    if (!EntityManager.HasComponent<CUnpathable>(currentPathingPoint))
+                        EntityManager.AddComponent<CUnpathable>(currentPathingPoint);
                 }
                 else
                 {
-                    if (HasComponent<CUnpathable>(currentPathingPoint))
+                    if (EntityManager.HasComponent<CUnpathable>(currentPathingPoint))
                         EntityManager.RemoveComponent<CUnpathable>(currentPathingPoint);
                 }
 
